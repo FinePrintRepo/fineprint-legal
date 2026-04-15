@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinePrint - Privacy Policy</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #1a1a1a; background: #F5F5F5; line-height: 1.7; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
+  .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+  .logo-circle { width: 34px; height: 34px; border-radius: 50%; background: #1a1a1a; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; }
+  .logo-name { font-weight: 700; font-size: 17px; }
+  h1 { font-size: 28px; letter-spacing: -0.02em; margin-bottom: 6px; }
+  .date { font-size: 13px; color: #888; margin-bottom: 32px; }
+  h2 { font-size: 18px; margin: 32px 0 12px; letter-spacing: -0.01em; }
+  p, li { font-size: 15px; color: #444; margin-bottom: 12px; }
+  ul { padding-left: 24px; margin-bottom: 12px; }
+  a { color: #1a1a1a; }
+  .card { background: #fff; border: 1px solid #E5E5E5; border-radius: 16px; padding: 32px; margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">
+    <div class="logo-circle">F</div>
+    <div class="logo-name">FinePrint</div>
+  </div>
+
+  <div class="card">
+    <h1>Privacy Policy</h1>
+    <p class="date">Effective date: April 15, 2026</p>
+
+    <p>FinePrint ("we", "us", "our") is a browser extension that helps you understand the legal documents you encounter online. This policy explains what data we collect, why, and how we protect it.</p>
+
+    <h2>1. What We Collect</h2>
+    <p><strong>Account information.</strong> When you create a FinePrint account, we collect your email address and a hashed password. We never see or store your plaintext password.</p>
+    <p><strong>Page text for analysis.</strong> When FinePrint detects a legal document (e.g., a privacy policy or terms of service) on a page you visit, it sends the text of that document to our server for AI analysis. We do <em>not</em> send any other browsing data, page content, or URLs that are not legal documents.</p>
+    <p><strong>Analysis history.</strong> We store the AI-generated summary and flagged clauses so you can review them later. The raw document text is stored alongside the analysis for reference.</p>
+    <p><strong>Usage metrics.</strong> We track aggregate counts (e.g., number of policies scanned, cookies rejected) stored locally in your browser via <code>chrome.storage</code>. These are never sent to our servers.</p>
+
+    <h2>2. What We Do NOT Collect</h2>
+    <ul>
+      <li>We do <strong>not</strong> track your general browsing history.</li>
+      <li>We do <strong>not</strong> read, collect, or transmit any personal data from the pages you visit (passwords, form inputs, emails, etc.).</li>
+      <li>We do <strong>not</strong> inject ads, trackers, or third-party analytics scripts.</li>
+      <li>We do <strong>not</strong> sell, rent, or share your data with third parties for advertising purposes.</li>
+    </ul>
+
+    <h2>3. How We Use Your Data</h2>
+    <ul>
+      <li><strong>AI analysis:</strong> Document text is sent to OpenAI's API (GPT-4o-mini) to generate a plain-English summary and flag concerning clauses. OpenAI processes the text under their <a href="https://openai.com/enterprise-privacy" target="_blank">Enterprise Privacy policy</a> and does not use API inputs for model training.</li>
+      <li><strong>Account management:</strong> Your email is used for authentication, password resets, and verification codes.</li>
+      <li><strong>Product improvement:</strong> We may review aggregate, anonymized statistics (e.g., total analyses count) to improve the product. We do not review individual analyses.</li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <ul>
+      <li><strong>Supabase</strong> (authentication and database) &mdash; hosted in the US. <a href="https://supabase.com/privacy" target="_blank">Privacy policy</a>.</li>
+      <li><strong>OpenAI</strong> (AI analysis) &mdash; processes document text under API terms. <a href="https://openai.com/policies/privacy-policy" target="_blank">Privacy policy</a>.</li>
+      <li><strong>Stripe</strong> (payments, Pro plan only) &mdash; handles payment information directly; we never see your full card number. <a href="https://stripe.com/privacy" target="_blank">Privacy policy</a>.</li>
+    </ul>
+
+    <h2>5. Data Storage and Security</h2>
+    <p>Your data is stored in a Supabase-managed PostgreSQL database with row-level security (RLS) enabled &mdash; each user can only access their own data. All data is encrypted in transit (TLS) and at rest.</p>
+    <p>Local browser data (<code>chrome.storage</code>) is sandboxed by Chrome's extension security model and is not accessible to websites or other extensions.</p>
+
+    <h2>6. Data Retention</h2>
+    <p>Your analysis history is retained as long as your account exists. You may delete your account at any time by contacting us at <a href="mailto:fineprintsupport@gmail.com">fineprintsupport@gmail.com</a>, and all associated data (profile, analyses, and Stripe customer record) will be permanently deleted within 30 days.</p>
+
+    <h2>7. Cookie Banner Auto-Rejection</h2>
+    <p>FinePrint can automatically click "Reject All" or "Decline" on cookie consent banners. This feature runs entirely in your browser &mdash; no data is sent to our servers. You can disable it in Settings &gt; Auto opt-out.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>FinePrint is not intended for children under 13. We do not knowingly collect data from children. If you believe a child has created an account, contact us and we will delete it.</p>
+
+    <h2>9. Your Rights</h2>
+    <p>Depending on your jurisdiction (GDPR, CCPA, etc.), you may have the right to access, correct, export, or delete your personal data. Contact <a href="mailto:fineprintsupport@gmail.com">fineprintsupport@gmail.com</a> and we will respond within 30 days.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. Material changes will be communicated via the extension or email. Continued use after changes constitutes acceptance.</p>
+
+    <h2>11. Contact</h2>
+    <p>Questions or concerns? Email us at <a href="mailto:fineprintsupport@gmail.com">fineprintsupport@gmail.com</a>.</p>
+  </div>
+</div>
+</body>
+</html>
