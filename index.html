@@ -9,7 +9,7 @@
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #1a1a1a; background: #F5F5F5; min-height: 100vh; display: flex; flex-direction: column; }
   header { padding: 32px 24px 0; max-width: 720px; margin: 0 auto; width: 100%; }
   .logo { display: flex; align-items: center; gap: 10px; }
-  .logo-circle { width: 36px; height: 36px; border-radius: 50%; background: #1a1a1a; color: #fff; display: flex; align-items: center; justify-content: center; font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 17px; flex-shrink: 0; }
+  .logo-circle { width: 36px; height: 36px; flex-shrink: 0; display: flex; align-items: center; }
   .logo-name { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 18px; letter-spacing: -0.02em; }
   main { flex: 1; max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; width: 100%; }
   h1 { font-family: Georgia, 'Times New Roman', serif; font-size: 32px; letter-spacing: -0.02em; margin-bottom: 10px; }
@@ -30,7 +30,13 @@
 
 <header>
   <div class="logo">
-    <div class="logo-circle">F</div>
+    <div class="logo-circle">
+      <svg width="36" height="36" viewBox="0 0 203 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60.9716 71.8943H35.2485C29.0199 71.8943 23.9688 76.9435 23.9688 83.1721V93.0401H62.7361C72.4682 93.0401 80.3576 85.1507 80.3576 75.4186C80.3576 65.6865 88.2471 57.7971 97.9792 57.7971H164.941C172.727 57.7971 179.038 51.4856 179.038 43.6999V33.127H99.7413C89.036 33.127 80.3576 41.8053 80.3576 52.5106C80.3576 63.2159 71.6769 71.8943 60.9716 71.8943Z" fill="#D2D2D2"/>
+        <path opacity="0.7" d="M60.9716 107.138H35.2485C29.0199 107.138 23.9688 112.188 23.9688 118.416V128.284H62.7361C72.4682 128.284 80.3576 120.395 80.3576 110.663C80.3576 100.931 88.2471 93.0412 97.9792 93.0412H143.795C151.581 93.0412 157.892 86.7297 157.892 78.944V68.3711H99.7413C89.036 68.3711 80.3576 77.0495 80.3576 87.7548C80.3576 98.4601 71.6769 107.138 60.9716 107.138Z" fill="#777777"/>
+        <path opacity="0.5" d="M60.9716 142.381H35.2485C29.0199 142.381 23.9688 147.43 23.9688 153.658V163.526H62.7361C72.4682 163.526 80.3576 155.637 80.3576 145.905C80.3576 136.173 88.2471 128.283 97.9792 128.283H125.469C131.697 128.283 136.747 123.234 136.747 117.006V103.613H99.7413C89.036 103.613 80.3576 112.292 80.3576 122.997C80.3576 133.702 71.6769 142.381 60.9716 142.381Z" fill="#0A0D12"/>
+      </svg>
+    </div>
     <div class="logo-name">FinePrint</div>
   </div>
 </header>
