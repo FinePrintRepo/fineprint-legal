@@ -9,7 +9,7 @@
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: #1a1a1a; background: #F5F5F5; line-height: 1.7; }
   .wrap { max-width: 680px; margin: 0 auto; padding: 48px 24px 80px; }
   .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-  .logo-circle { width: 34px; height: 34px; display: flex; align-items: center; }
+  .logo-circle { width: 34px; height: 34px; border-radius: 50%; background: #1a1a1a; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; }
   .logo-name { font-weight: 700; font-size: 17px; }
   h1 { font-size: 28px; letter-spacing: -0.02em; margin-bottom: 6px; }
   .date { font-size: 13px; color: #888; margin-bottom: 32px; }
@@ -23,31 +23,30 @@
 <body>
 <div class="wrap">
   <div class="logo">
-    <div class="logo-circle">
-      <svg width="34" height="34" viewBox="0 0 203 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M60.9716 71.8943H35.2485C29.0199 71.8943 23.9688 76.9435 23.9688 83.1721V93.0401H62.7361C72.4682 93.0401 80.3576 85.1507 80.3576 75.4186C80.3576 65.6865 88.2471 57.7971 97.9792 57.7971H164.941C172.727 57.7971 179.038 51.4856 179.038 43.6999V33.127H99.7413C89.036 33.127 80.3576 41.8053 80.3576 52.5106C80.3576 63.2159 71.6769 71.8943 60.9716 71.8943Z" fill="#D2D2D2"/>
-        <path opacity="0.7" d="M60.9716 107.138H35.2485C29.0199 107.138 23.9688 112.188 23.9688 118.416V128.284H62.7361C72.4682 128.284 80.3576 120.395 80.3576 110.663C80.3576 100.931 88.2471 93.0412 97.9792 93.0412H143.795C151.581 93.0412 157.892 86.7297 157.892 78.944V68.3711H99.7413C89.036 68.3711 80.3576 77.0495 80.3576 87.7548C80.3576 98.4601 71.6769 107.138 60.9716 107.138Z" fill="#777777"/>
-        <path opacity="0.5" d="M60.9716 142.381H35.2485C29.0199 142.381 23.9688 147.43 23.9688 153.658V163.526H62.7361C72.4682 163.526 80.3576 155.637 80.3576 145.905C80.3576 136.173 88.2471 128.283 97.9792 128.283H125.469C131.697 128.283 136.747 123.234 136.747 117.006V103.613H99.7413C89.036 103.613 80.3576 112.292 80.3576 122.997C80.3576 133.702 71.6769 142.381 60.9716 142.381Z" fill="#0A0D12"/>
-      </svg>
-    </div>
+    <svg width="28" height="28" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10 18 Q18 12 28 15 Q38 18 46 13" stroke="#BDBDBD" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+      <path d="M10 28 Q18 22 28 25 Q38 28 46 23" stroke="#9E9E9E" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+      <path d="M10 38 Q18 32 28 35 Q38 38 46 33" stroke="#757575" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+    </svg>
     <div class="logo-name">FinePrint</div>
   </div>
 
   <div class="card">
     <h1>Privacy Policy</h1>
-    <p class="date">Effective date: April 15, 2026</p>
+    <p class="date">Effective date: April 17, 2026</p>
 
     <p>FinePrint ("we", "us", "our") is a browser extension that helps you understand the legal documents you encounter online. This policy explains what data we collect, why, and how we protect it.</p>
 
     <h2>1. What We Collect</h2>
     <p><strong>Account information.</strong> When you create a FinePrint account, we collect your email address and a hashed password. We never see or store your plaintext password.</p>
     <p><strong>Page text for analysis.</strong> When FinePrint detects a legal document (e.g., a privacy policy or terms of service) on a page you visit, it sends the text of that document to our server for AI analysis. We do <em>not</em> send any other browsing data, page content, or URLs that are not legal documents.</p>
-    <p><strong>Analysis history.</strong> We store the AI-generated summary and flagged clauses so you can review them later. The raw document text is stored alongside the analysis for reference.</p>
-    <p><strong>Usage metrics.</strong> We track aggregate counts (e.g., number of policies scanned, cookies rejected) stored locally in your browser via <code>chrome.storage</code>. These are never sent to our servers.</p>
+    <p><strong>Analysis history &amp; page URLs.</strong> When FinePrint analyzes a legal document, we store the URL of that specific page alongside the AI-generated summary and flagged clauses so you can review them later. We only record the URLs of pages where a legal document was actively analyzed — we do <em>not</em> record your general browsing history or the URLs of pages you visit that do not contain a legal document.</p>
+    <p><strong>Usage metrics.</strong> We store aggregate counts locally in your browser (e.g., number of policies scanned, cookies rejected, estimated time saved) via <code>chrome.storage</code>. These counts are never sent to our servers and are used only to display your personal stats inside the extension.</p>
+    <p><strong>In-extension interactions.</strong> We track user-initiated actions within the extension (e.g., toggling auto opt-out, clicking Upgrade) solely to provide and improve core features. We do not log mouse movements, keystrokes, or activity outside the extension panel.</p>
 
     <h2>2. What We Do NOT Collect</h2>
     <ul>
-      <li>We do <strong>not</strong> track your general browsing history.</li>
+      <li>We do <strong>not</strong> track your general browsing history. We only store the URL of a page when you actively use FinePrint to analyze a legal document on that page.</li>
       <li>We do <strong>not</strong> read, collect, or transmit any personal data from the pages you visit (passwords, form inputs, emails, etc.).</li>
       <li>We do <strong>not</strong> inject ads, trackers, or third-party analytics scripts.</li>
       <li>We do <strong>not</strong> sell, rent, or share your data with third parties for advertising purposes.</li>
